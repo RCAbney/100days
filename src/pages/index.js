@@ -1,20 +1,24 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import usePosts from "../hooks/usePosts"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Latest Posts</h1>
-    <p>Alright chums, let's do this.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/about/">About</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const posts = usePosts()
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <h1>Latest Posts</h1>
+      <p>Alright chums, let's do this.</p>
+      {posts.map(post => (
+        <Link to={post.slug}>
+          <h2>{post.title}</h2>
+        </Link>
+      ))}
+    </Layout>
+  )
+}
 
 export default IndexPage
