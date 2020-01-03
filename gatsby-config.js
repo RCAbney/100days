@@ -22,12 +22,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/posts`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`raleway\:400,700`],
@@ -38,7 +32,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
+          default: require.resolve("./src/components/post.js"),
         },
       },
     },
