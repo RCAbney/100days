@@ -13,9 +13,12 @@ const IndexPage = () => {
       <h1>Latest Posts</h1>
       <p>Alright chums, let's do this.</p>
       {posts.map(post => (
-        <Link to={post.slug}>
-          <h2>{post.title}</h2>
-        </Link>
+        <>
+          <Link to={post.slug}>
+            <h2>{post.title}</h2>
+          </Link>
+          <p>Posted by {post.author}</p>
+        </>
       ))}
     </Layout>
   )
