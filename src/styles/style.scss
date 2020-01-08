@@ -1,6 +1,48 @@
 @import "_reset";
 @import "_variables";
 
+html {
+  font-size: $base-font-size;
+}
+
 body {
   font-family: $sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif;
+  font-weight: 700;
+}
+
+.wrapper,
+header {
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    text-decoration: none;
+  }
+  li {
+    display: inline-block;
+    a {
+      padding-left: 1rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
 }
