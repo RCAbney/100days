@@ -9,6 +9,7 @@ export const query = graphql`
       frontmatter {
         title
         author
+        date(formatString: "DD MMM YYYY")
       }
       body
     }
@@ -19,6 +20,9 @@ const PostTemplate = ({ data: { mdx: post } }) => (
   <Layout>
     <article className="post">
       <h1>{post.frontmatter.title}</h1>
+      <p>
+        Posted by {post.frontmatter.author} - {post.frontmatter.date}
+      </p>
       <MDXRenderer className="post">{post.body}</MDXRenderer>
     </article>
     <Link to="/">Back to the front!</Link>

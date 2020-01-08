@@ -17,7 +17,9 @@ const IndexPage = () => {
           <Link to={post.slug}>
             <h2>{post.title}</h2>
           </Link>
-          <p>Posted by {post.author}</p>
+          <p>
+            Posted by {post.author} - {post.date}
+          </p>
         </>
       ))}
     </Layout>
