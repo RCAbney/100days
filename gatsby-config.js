@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `100 Days of Gatsby`,
+    title: `RCAbney.dev`,
     description: `RCAbney's blog site for the #100daysofgatsby challenge!`,
-    author: `@rcabney`,
+    author: `@RCAbney`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/post.js"),
+          default: require.resolve("./src/components/blogpost.js"),
         },
       },
     },
@@ -47,7 +47,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/rcabney-logo.jpg`, // This path is relative to the root of the site.
       },
     },
   ],

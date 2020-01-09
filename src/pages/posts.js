@@ -4,14 +4,13 @@ import usePosts from "../hooks/usePosts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+const PostsPage = () => {
   const posts = usePosts()
 
   return (
     <Layout>
-      <SEO title="Home" />
-      <h1>100 Days of Gatsby ... and More!</h1>
-      {posts.length === 0 ? <h2>No Posts Yet WTF?</h2> : <h2>Latest Posts</h2>}
+      <SEO title="Posts" />
+      {posts.length === 0 ? <h1>No Posts Yet WTF?</h1> : <h1>Latest Posts</h1>}
       {posts.map(post => (
         <>
           <Link to={`posts/${post.slug}`}>
@@ -28,4 +27,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default PostsPage

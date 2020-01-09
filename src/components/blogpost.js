@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import SEO from "./seo"
 import Layout from "./layout"
 
 export const query = graphql`
@@ -16,9 +17,10 @@ export const query = graphql`
   }
 `
 
-const PostTemplate = ({ data: { mdx: post } }) => (
+const BlogPostTemplate = ({ data: { mdx: post } }) => (
   <Layout>
     <article className="post">
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
       <h1>{post.frontmatter.title}</h1>
       <p>
         Posted by {post.frontmatter.author} - {post.frontmatter.date}
@@ -29,4 +31,4 @@ const PostTemplate = ({ data: { mdx: post } }) => (
   </Layout>
 )
 
-export default PostTemplate
+export default BlogPostTemplate
