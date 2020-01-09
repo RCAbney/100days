@@ -17,6 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `portfolio`,
+        path: `${__dirname}/src/portfolio`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -33,7 +40,18 @@ module.exports = {
       options: {
         defaultLayouts: {
           default: require.resolve("./src/components/blogpost.js"),
+          posts: require.resolve("./src/components/blogpost.js"),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 1200,
+            },
+          },
+        ],
+        plugins: [{ resolve: `gatsby-remark-images` }],
       },
     },
     `gatsby-transformer-sharp`,
