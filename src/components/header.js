@@ -1,20 +1,24 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Image from "../components/image"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <h1 style={{ margin: 0 }}>
-      <Link to="/">{siteTitle}</Link>
-    </h1>
-    <ul style={{ listStyle: `none` }} className="navbar">
-      <li>
-        <Link to="/">Posts</Link>
-      </li>
-      <li>
-        <Link to="/about/">About</Link>
-      </li>
-    </ul>
+    <div className="nav-wrapper">
+      <Link to="/">
+        <Image />
+      </Link>
+
+      <ul className="navbar">
+        <li>
+          <Link to="/about/">About</Link>
+        </li>
+        <li>
+          <Link to="/posts/">Posts</Link>
+        </li>
+      </ul>
+    </div>
   </header>
 )
 
