@@ -118,3 +118,13 @@ footer {
     display: block;
   }
 }
+
+.site-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
