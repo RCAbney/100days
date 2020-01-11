@@ -41,6 +41,7 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/blogpost.js"),
           posts: require.resolve("./src/components/blogpost.js"),
+          portfolio: require.resolve("./src/components/portfolioItem.js"),
         },
         gatsbyRemarkPlugins: [
           {
