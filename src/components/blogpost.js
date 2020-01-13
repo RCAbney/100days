@@ -26,8 +26,8 @@ const BlogPostTemplate = ({ data: { mdx: post } }) => (
         Posted by {post.frontmatter.author} - {post.frontmatter.date}
       </p>
       <MDXRenderer className="post">{post.body}</MDXRenderer>
+      <Link to="/">Back to the front!</Link>
     </article>
-    <Link to="/">Back to the front!</Link>
   </Layout>
 )
 

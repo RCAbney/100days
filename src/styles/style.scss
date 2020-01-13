@@ -1,19 +1,29 @@
-@import "_reset";
-@import "_variables";
+@import "reset";
+
+/* start RCABNEY styles */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --spacing: 1.5rem;
+  --sans-serif: "Raleway", sans-serif;
+  --serif: "Merriweather", serif;
+  --brand-primary: #6c8b6b;
+  --primary-text: rgba(0, 0, 0, 0.8);
+}
 
 html {
-  font-size: $base-font-size;
+  font-size: 100%;
 }
 
 body {
-  font-family: $sans-serif;
+  background-color: #eee;
+  color: var(--primary-text);
   line-height: 1.5;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
+  font-size: 1.125rem;
+  font-family: var(--sans-serif);
 }
 
 h1,
@@ -22,84 +32,131 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $serif;
+  font-family: var(--serif);
   font-weight: 700;
-}
-
-.wrapper,
-.nav-wrapper {
-  max-width: 80ch;
-  margin: 0 auto;
-  padding: 0 1rem;
+  color: var(--brand-primary);
 }
 
 header {
-  background-color: black;
-  padding: 1rem 0;
-  border-bottom: 3px solid #6c8b6b;
+  background-color: #000;
+  border-bottom: 4px solid var(--brand-primary);
 }
 
 .logo {
   display: block;
   width: 200px;
+  margin: 1rem auto;
 }
 
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+.logo > a {
   color: #fff;
-  a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+
+  img {
+    width: 100%;
+    height: auto;
   }
-  li {
-    display: inline-block;
-    a {
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+}
+
+.portfolio {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: var(--spacing);
+}
+
+.card {
+  min-width: 250px;
+  background-color: #fff;
+  box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin: 0;
+    color: var(--brand-primary);
+    .folio-link {
       color: inherit;
-      padding-left: 1rem;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
+      text-decoration: none;
     }
   }
+}
+
+.card > * + * {
+  margin-bottom: var(--spacing);
+}
+
+.folio-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  align-self: flex-start;
+}
+
+.folio-details {
+  padding: 2rem;
+  padding-bottom: 0;
+  background-color: #fff;
+  flex: 1;
+}
+
+.folio-tags {
+  padding: 0 0 1rem 2rem;
+  list-style: none;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  & > li {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #485b48;
+  }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 footer {
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: black;
-  text-align: center;
-  border-top: 3px solid #6c8b6b;
   color: #fff;
-  a {
-    color: inherit;
-  }
+  background-color: #000;
 }
 
-.post-title {
-  margin: 0;
+.footer-link {
+  color: #fff;
+  text-decoration: none;
 }
 
-.post-author {
-  font-size: 0.8rem;
-  margin-top: 0;
-}
-
-@media screen and (min-width: 800px) {
-  html {
-    font-size: $desktop-font-size;
-  }
-  .nav-wrapper {
-    li {
-      a {
-        font-size: 1rem;
-      }
-    }
+.intro,
+.posts-list,
+section.resume,
+article.post {
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing);
+  max-width: 1200px;
+  & > * + * {
+    margin-bottom: var(--spacing);
   }
 }
 
@@ -113,10 +170,8 @@ footer {
   flex-basis: 50%;
 }
 
-@media (max-width: 450px) {
-  .skills {
-    display: block;
-  }
+hr {
+  border: 1px solid #ccc;
 }
 
 .site-content {
@@ -127,4 +182,34 @@ footer {
 
 main {
   flex-grow: 1;
+}
+
+@media (max-width: 450px) {
+  .skills {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .logo {
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    a {
+      padding: 0 var(--spacing);
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
 }

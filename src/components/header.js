@@ -5,12 +5,12 @@ import Image from "../components/image"
 
 const Header = () => (
   <header>
-    <div className="nav-wrapper">
+    <nav>
       <Link to="/">
         <Image />
       </Link>
 
-      <ul className="navbar">
+      <ul className="nav-links">
         <li>
           <Link to="/about/">About</Link>
         </li>
@@ -21,7 +21,7 @@ const Header = () => (
           <Link to="/posts/">Posts</Link>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
 )
 

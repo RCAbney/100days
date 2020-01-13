@@ -10,8 +10,21 @@ const useWorks = () => {
         nodes {
           frontmatter {
             title
+            post_index
             author
             slug
+            tags
+            image {
+              sharp: childImageSharp {
+                fluid(
+                  maxWidth: 800
+                  maxHeight: 800
+                  traceSVG: { color: "#6c8b6b" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
           }
           excerpt
         }
@@ -21,8 +34,11 @@ const useWorks = () => {
 
   return data.allMdx.nodes.map(work => ({
     title: work.frontmatter.title,
+    postIndex: work.frontmatter.post_index,
     author: work.frontmatter.author,
     slug: work.frontmatter.slug,
+    tags: work.frontmatter.tags,
+    image: work.frontmatter.image,
     excerpt: work.excerpt,
   }))
 }

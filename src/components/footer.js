@@ -1,11 +1,14 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Footer = () => (
   <footer>
-    © {new Date().getFullYear()}, Built with
-    {` `}
-    <a href="https://www.gatsbyjs.org">Gatsby</a> for the 100 Days of Gatsby
-    Challenge
+    <div className="footer-content">
+      <Link to="/" className="footer-link">
+        © {new Date().getFullYear()}
+        {` `}RCAbney
+      </Link>
+    </div>
   </footer>
 )
 
