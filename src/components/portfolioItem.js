@@ -21,8 +21,8 @@ const PortfolioItemTemplate = ({ data: { mdx: post } }) => (
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <h1>{post.frontmatter.title}</h1>
       <MDXRenderer className="post">{post.body}</MDXRenderer>
+      <Link to="/">Back to the front!</Link>
     </article>
-    <Link to="/">Back to the front!</Link>
   </Layout>
 )
 
