@@ -75,7 +75,7 @@ header {
   max-width: 1200px;
   margin: 0 auto 2rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: var(--spacing);
 }
 
@@ -99,10 +99,13 @@ header {
   margin-bottom: var(--spacing);
 }
 
+.folio-headline {
+  font-size: 1.2rem;
+}
+
 .folio-image {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
   align-self: flex-start;
 }
 
