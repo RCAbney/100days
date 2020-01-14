@@ -15,7 +15,6 @@ const PortfolioItemCard = ({ image, title, excerpt, tags, slug }) => {
             {title}
           </Link>
         </h2>
-        <p>{excerpt}</p>
       </div>
       <WorkTags tags={tags} />
     </div>
