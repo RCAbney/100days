@@ -17,8 +17,8 @@ const useWorks = () => {
             image {
               sharp: childImageSharp {
                 fluid(
-                  maxWidth: 800
-                  maxHeight: 800
+                  maxWidth: 550
+                  maxHeight: 550
                   traceSVG: { color: "#6c8b6b" }
                 ) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
