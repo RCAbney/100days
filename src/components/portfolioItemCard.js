@@ -10,7 +10,7 @@ const PortfolioItemCard = ({ image, title, excerpt, tags, slug }) => {
         <Image fluid={image.sharp.fluid} className="folio-image" alt={title} />
       </Link>
       <div className="folio-details">
-        <h2>
+        <h2 className="folio-headline">
           <Link className="folio-link" to={`portfolio/${slug}`}>
             {title}
           </Link>
