@@ -1,13 +1,13 @@
 import { Link } from "gatsby"
 
 import React from "react"
-import Image from "../components/image"
+import LogoImage from "../components/logoImage"
 
 const Header = () => (
   <header>
     <nav>
       <Link to="/">
-        <Image />
+        <LogoImage />
       </Link>
 
       <ul className="nav-links">

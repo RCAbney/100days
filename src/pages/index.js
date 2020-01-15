@@ -11,12 +11,8 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="posts-list">
-        <h1>100 Days of Gatsby ... and More!</h1>
-        {posts.length === 0 ? (
-          <h2>No Posts Yet WTF?</h2>
-        ) : (
-          <h2>Latest Posts</h2>
-        )}
+        <h1>Hello There!</h1>
+        <h2>From the Blog: Latest Posts</h2>
         {posts.map(post => (
           <>
             <Link to={`posts/${post.slug}`}>

@@ -4,13 +4,12 @@ import PortfolioItemCard from "./portfolioItemCard"
 const PortfolioList = ({ works }) => {
   return (
     <div className="portfolio">
-      {works.map(work => (
+      {works.map((work, index) => (
         <PortfolioItemCard
-          key={work.slug}
+          key={work.slug + index}
           title={work.title}
           image={work.image}
           tags={work.tags}
-          excerpt={work.excerpt}
           slug={work.slug}
         />
       ))}
