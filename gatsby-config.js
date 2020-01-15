@@ -49,6 +49,8 @@ module.exports = {
             options: {
               linkImagesToOriginal: false,
               maxWidth: 1200,
+              quality: 100,
+              traceSVG: { color: "#6c8b6b" },
             },
           },
         ],

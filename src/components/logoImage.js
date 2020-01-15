@@ -13,13 +13,13 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+const LogoImage = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "rcabney-logo-hz.png" }) {
         childImageSharp {
-          fluid(maxWidth: 600, traceSVG: { color: "#6c8b6b" }) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          fixed(width: 200, quality: 100, traceSVG: { color: "#6c8b6b" }) {
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
@@ -28,11 +28,12 @@ const Image = () => {
 
   return (
     <Img
-      fluid={data.placeholderImage.childImageSharp.fluid}
+      fixed={data.placeholderImage.childImageSharp.fixed}
       alt="RCAbney Logo"
       className="logo"
+      style={{ display: "block" }}
     />
   )
 }
 
-export default Image
+export default LogoImage

@@ -10,7 +10,6 @@ const useWorks = () => {
         nodes {
           frontmatter {
             title
-            post_index
             author
             slug
             tags
@@ -34,7 +33,6 @@ const useWorks = () => {
 
   return data.allMdx.nodes.map(work => ({
     title: work.frontmatter.title,
-    postIndex: work.frontmatter.post_index,
     author: work.frontmatter.author,
     slug: work.frontmatter.slug,
     tags: work.frontmatter.tags,

@@ -12,6 +12,7 @@
   --serif: "Merriweather", serif;
   --brand-primary: #6c8b6b;
   --primary-text: rgba(0, 0, 0, 0.8);
+  --secondary-text: rgba(255, 255, 255, 0.8);
 }
 
 html {
@@ -113,11 +114,12 @@ header {
   padding: 2rem;
   padding-bottom: 0;
   background-color: #fff;
+  margin-bottom: 0;
   flex: 1;
 }
 
 .folio-tags {
-  padding: 0 0 1rem 2rem;
+  padding: 0 0 0 2rem;
   list-style: none;
   font-size: 0.75rem;
   display: flex;
@@ -125,12 +127,16 @@ header {
   flex-wrap: wrap;
 
   & > li {
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 6px;
-    color: #fff;
-    background-color: #485b48;
+    // margin-right: 0.5rem;
+    // margin-bottom: 0.5rem;
+    // padding: 0.5rem;
+    // border-radius: 6px;
+    // color: #fff;
+    // background-color: #485b48;
+    &:not(:last-child)::after {
+      content: "\00B7";
+      padding: 0 0.25rem;
+    }
   }
 }
 
@@ -146,7 +152,7 @@ footer {
 }
 
 .footer-link {
-  color: #fff;
+  color: var(--secondary-text);
   text-decoration: none;
 }
 
@@ -161,6 +167,10 @@ article.post {
   & > * + * {
     margin-bottom: var(--spacing);
   }
+}
+
+.intro h1 {
+  margin-bottom: 0;
 }
 
 .skills {
