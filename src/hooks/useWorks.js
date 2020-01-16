@@ -10,7 +10,6 @@ const useWorks = () => {
         nodes {
           frontmatter {
             title
-            author
             slug
             tags
             image {
@@ -25,7 +24,6 @@ const useWorks = () => {
               }
             }
           }
-          excerpt
         }
       }
     }
@@ -33,11 +31,9 @@ const useWorks = () => {
 
   return data.allMdx.nodes.map(work => ({
     title: work.frontmatter.title,
-    author: work.frontmatter.author,
     slug: work.frontmatter.slug,
     tags: work.frontmatter.tags,
     image: work.frontmatter.image,
-    excerpt: work.excerpt,
   }))
 }
 

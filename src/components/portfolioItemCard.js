@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import WorkTags from "./worktags"
 
-const PortfolioItemCard = ({ image, title, tags, slug, key }) => {
+const PortfolioItemCard = ({ image, title, tags, slug }) => {
   return (
-    <div className="card" key={key}>
+    <div className="card">
       <Link to={`portfolio/${slug}`}>
         <Image fluid={image.sharp.fluid} className="folio-image" alt={title} />
       </Link>
