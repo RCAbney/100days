@@ -24,7 +24,9 @@ const PostsPage = () => {
             <p className="post-author">
               Posted by {post.author} - {post.date}
             </p>
-            <p>{post.excerpt}</p>
+            <p>
+              {post.excerpt} <Link to={`posts/${post.slug}`}>...more</Link>
+            </p>
             <hr />
           </>
         ))}
