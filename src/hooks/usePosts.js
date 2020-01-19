@@ -5,7 +5,7 @@ const usePosts = () => {
     query {
       allMdx(
         filter: { fileAbsolutePath: { glob: "**/src/posts/*.mdx" } }
-        sort: { fields: [frontmatter___date], order: ASC }
+        sort: { fields: [frontmatter___date], order: DESC }
       ) {
         nodes {
           frontmatter {
