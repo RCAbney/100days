@@ -1,0 +1,72 @@
+---
+title: Create an Array of Unique Values with Set
+date: 2020-01-22
+slug: create-an-array-of-unique-values
+author: Ryan Abney
+---
+
+I was creating a component that allows a user to filter a list of items by its categories. For purposes of this article I'll ignore any fetching and we'll use the following array of objects as the data returned from our API.
+
+```js
+const movies = [
+  { title: "Star Wars", categories: "science-fiction" },
+  { title: "Raiders of the Lost Ark", categories: "adventure" },
+  { title: "Aladdin", categories: "adventure" },
+  { title: "The Fellowship of the Ring", categories: "fantasy" },
+]
+```
+
+My component needs to list each category. In order to do that I'll map over the movies array and have it return the value of each categories property.
+
+```js
+const categories = movies.map(movie => movie.categories)
+// ["science-fiction", "adventure", "adventure", "fantasy"]
+```
+
+This isn't quite what I want as these values aren't unique. I don't want the user to have multiple 'adventure' choices. Ultimately, my array needs to consist of unique values.
+
+Thats where `Set` comes into play. [Set's MDN reference page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) explains that Set objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the Set may only occur once; it is unique in the Set's collection.
+
+Let's refactor our previous code. We'll use the spread syntax to place all of the unique values into an array named categories.
+
+```js
+const categories = [...new Set(movies.map(movie => movie.categories))]
+// ["science-fiction", "adventure", "fantasy"]
+```
+
+However, movies (or blog posts, books, et al) rarely fall into just one category. So what happens if our data returned from the API is structured as such?
+
+```js
+const movies = [
+  { title: "Star Wars", categories: ["science-fiction", "fantasy"] },
+  { title: "Raiders of the Lost Ark", categories: ["action", "adventure"] },
+  { title: "Aladdin", categories: ["animated", "adventure", "musical"] },
+  {
+    title: "The Fellowship of the Ring",
+    categories: ["fantasy", "action", "adventure"],
+  },
+]
+
+const categories = [...new Set(movies.map(movie => movie.categories))]
+// [["science-fiction", "fantasy"], ["action", "adventure"], ["animated", "adventure", "musical"], ["fantasy", "action", "adventure"]]
+```
+
+Ugh, now we have an array of arrays, and not a collection of unique values. What do we do in this case? This looks like a job for [`Array.flat()`.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) Let's ignore the `Set` for the moment and see what happens when we flatten.
+
+```js
+const categories = movies.map(movie => movie.categories).flat()
+// ["science-fiction", "fantasy", "action", "adventure", "animated", "adventure", "musical", "fantasy", "action", "adventure"]
+```
+
+Now we have a one-dimensional array that we can use with `Set`
+
+```js
+const categories = [...new Set(movies.map(movie => movie.categories).flat())]
+// ["science-fiction", "fantasy", "action", "adventure", "animated", "musical"]
+```
+
+So to sum up, we can use Set to generate an array of unique values. If the data that we're providing to set is multi-dimensional, we can first use `Array.flat()` to flatten it to a one dimensional array.
+
+Here's an example Codepen of this in action.
+
+https://codepen.io/rcabney/pen/BayGzPd
