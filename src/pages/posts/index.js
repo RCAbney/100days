@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import usePosts from "../hooks/usePosts"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import usePosts from "../../hooks/usePosts"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
 const PostsPage = () => {
   const posts = usePosts()
