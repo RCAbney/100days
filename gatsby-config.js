@@ -53,6 +53,9 @@ module.exports = {
               tracedSVG: { color: "#6c8b6b" },
             },
           },
+          {
+            resolve: `gatsby-remark-embedder`,
+          },
         ],
         plugins: [{ resolve: `gatsby-remark-images` }],
       },
