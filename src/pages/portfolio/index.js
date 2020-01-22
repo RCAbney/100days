@@ -1,8 +1,8 @@
 import React from "react"
-import PortfolioList from "../components/portfolioList"
-import useWorks from "../hooks/useWorks"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import PortfolioList from "../../components/portfolioList"
+import useWorks from "../../hooks/useWorks"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
 const PortfolioPage = () => {
   const works = useWorks()

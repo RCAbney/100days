@@ -1,12 +1,12 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
-const SecondPage = () => (
+const Resume = () => (
   <Layout>
-    <SEO title="About" />
+    <SEO title="Resume" />
     <section className="resume">
-      <h1>About Me</h1>
+      <h1>Ryan Abney - Resume</h1>
       <p>
         Confident, versatile detail-oriented front-end developer skilled in
         researching and developing new production workflows. Previously a key
@@ -104,4 +104,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Resume
