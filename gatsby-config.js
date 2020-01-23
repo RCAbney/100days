@@ -57,7 +57,10 @@ module.exports = {
             resolve: `gatsby-remark-embedder`,
           },
         ],
-        plugins: [{ resolve: `gatsby-remark-images` }],
+        plugins: [
+          { resolve: `gatsby-remark-images` },
+          `gatsby-remark-reading-time`,
+        ],
       },
     },
     `gatsby-transformer-sharp`,

@@ -15,6 +15,11 @@ const usePosts = () => {
             slug
           }
           excerpt
+          fields {
+            readingTime {
+              text
+            }
+          }
         }
       }
     }
@@ -26,6 +31,7 @@ const usePosts = () => {
     author: post.frontmatter.author,
     slug: post.frontmatter.slug,
     excerpt: post.excerpt,
+    readingTime: post.fields.readingTime.text,
   }))
 }
 

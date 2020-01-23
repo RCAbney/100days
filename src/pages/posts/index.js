@@ -18,7 +18,7 @@ const PostsPage = () => {
               <h2 className="post-title">{post.title}</h2>
             </Link>
             <p className="post-author">
-              Posted by {post.author} - {post.date}
+              Posted by {post.author} - {post.date} - {post.readingTime}
             </p>
             <p>
               {post.excerpt} <Link to={`posts/${post.slug}`}>...more</Link>

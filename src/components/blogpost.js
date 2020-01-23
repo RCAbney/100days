@@ -13,6 +13,11 @@ export const query = graphql`
         date(formatString: "DD MMM YYYY")
       }
       body
+      fields {
+        readingTime {
+          text
+        }
+      }
     }
   }
 `
@@ -23,7 +28,8 @@ const BlogPostTemplate = ({ data: { mdx: post } }) => (
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <h1>{post.frontmatter.title}</h1>
       <p>
-        Posted by {post.frontmatter.author} - {post.frontmatter.date}
+        Posted by {post.frontmatter.author} - {post.frontmatter.date} -{" "}
+        {post.fields.readingTime.text}
       </p>
       <MDXRenderer className="post">{post.body}</MDXRenderer>
       <Link to="/">Back to the front!</Link>

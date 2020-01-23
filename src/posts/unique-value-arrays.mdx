@@ -5,7 +5,7 @@ slug: create-an-array-of-unique-values
 author: Ryan Abney
 ---
 
-I was creating a component that allows a user to filter a list of items by its categories. For purposes of this article I'll ignore any fetching and we'll use the following array of objects as the data returned from our API.
+I was creating a component that allows a user to filter a list of items by its categories and needed to generate an array of unique values. For purposes of this article I'll ignore any fetching and we'll use the following array of objects as the data returned from our API.
 
 ```js
 const movies = [
@@ -63,6 +63,8 @@ Now we have a one-dimensional array that we can use with `Set`
 ```js
 const categories = [...new Set(movies.map(movie => movie.categories).flat())]
 // ["science-fiction", "fantasy", "action", "adventure", "animated", "musical"]
+// alternately you can use the Array.flatMap method, which will return the same results as above
+const categories = [...new Set(moves.flatMap(movie => movie.categories))]
 ```
 
 So to sum up, we can use Set to generate an array of unique values. If the data that we're providing to set is multi-dimensional, we can first use `Array.flat()` to flatten it to a one dimensional array.
