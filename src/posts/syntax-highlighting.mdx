@@ -5,6 +5,10 @@ slug: syntax-highlighting-in-mdx
 author: Ryan Abney
 ---
 
+Syntax highlighting was something I took for granted. For some reason I was assuming that markdown/mdx would let you do it by default. That's not the case, but luckily there's a way to quickly set up syntax highlighting in Gatsby by using [gatsby-remark-embedder.](https://www.gatsbyjs.org/packages/gatsby-remark-embedder/)
+
+Here's a [link on Egghead.io to a great tutorial](https://egghead.io/lessons/react-syntax-highlighting-code-blocks-using-components-with-prism-react-renderer-and-gatsby-mdx) by Chris Biscardi.
+
 let's do some syntax highlighting in gatsby
 
 Here's some CSS
@@ -22,13 +26,4 @@ now a javascript one
 ```js
 let foo = bar
 const sum = (a, b) => a + b
-```
-
-How about some HTML?
-
-```html
-<section>
-  <h1>Taco Bell!</h1>
-  <p>Taco Bell is America's favorite place to eat rite?</p>
-</section>
 ```

@@ -144,6 +144,8 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
@@ -154,6 +156,18 @@ footer {
 .footer-link {
   color: var(--secondary-text);
   text-decoration: none;
+}
+
+.social-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    width: 1.25rem;
+    margin-left: 0.5rem;
+    opacity: 0.8;
+  }
 }
 
 .intro,
