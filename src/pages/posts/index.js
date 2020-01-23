@@ -11,11 +11,7 @@ const PostsPage = () => {
     <Layout>
       <SEO title="Posts" />
       <div className="posts-list">
-        {posts.length === 0 ? (
-          <h1>No Posts Yet WTF?</h1>
-        ) : (
-          <h1>Latest Posts</h1>
-        )}
+        <h1>Latest Posts</h1>
         {posts.map(post => (
           <>
             <Link to={`posts/${post.slug}`}>
