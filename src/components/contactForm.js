@@ -31,11 +31,11 @@ const ContactForm = () => {
           }),
         })
           .then(() => {
-            alert("success!")
+            console.log("success!")
             setSubmitting(false)
           })
           .catch(error => {
-            alert("wrongo!")
+            console.log("wrongo!")
             setSubmitting(false)
           })
       }}
