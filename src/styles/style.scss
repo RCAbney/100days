@@ -240,3 +240,45 @@ main {
     }
   }
 }
+
+.form-contact {
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 1rem 1rem #ccc;
+  padding: 2rem;
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.form-contact input,
+.form-contact textarea {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.form-contact label {
+  font-family: inherit;
+}
+
+.form-contact button {
+  background-color: red;
+  color: #fff;
+  border: 0;
+  padding: 0.25rem 1.25rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  display: block;
+  color: red;
+  font-weight: 700;
+  margin-top: -1rem;
+}
