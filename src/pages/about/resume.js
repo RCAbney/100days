@@ -70,7 +70,7 @@ const Resume = () => (
         </li>
       </ul>
 
-      <h3>Gannett — Digital Media Designer II</h3>
+      <h3>DesignIQ (formerly Gannett) — Digital Media Designer II</h3>
       <p>FEB 2013 - JAN 2016</p>
       <ul>
         <li>
@@ -85,7 +85,7 @@ const Resume = () => (
         <li>Performed QA checks on junior artist ads.</li>
       </ul>
 
-      <h3>Fusework Studios —Graphic and Web Design Intern</h3>
+      <h3>Fusework Studios — Graphic and Web Design Intern</h3>
       <p>JUN 2012 - AUG 2012</p>
       <ul>
         <li>Created WordPress site mock-ups for client presentations.</li>
@@ -93,6 +93,48 @@ const Resume = () => (
           Wrote blog posts, designed infographics, and prepared sales materials.
         </li>
       </ul>
+      <h3>USIC Inc. —Billing Clerk</h3>
+      <p>SEP 2004 - JAN 2012</p>
+      <ul>
+        <li>Audited daily billing records and prepared invoices.</li>
+      </ul>
+      <h3>GNC — Store Manager</h3>
+      <p>JUN 2000 - JUL 2004</p>
+      <ul>
+        <li>
+          Oversaw daily store operations, inventory management, hiring, and
+          training of associates.
+        </li>
+      </ul>
+      <h3>U.S. Navy — Navy Recruiting District, Houston, TX</h3>
+      <p>AUG 1998 - JUN 2000</p>
+      <ul>
+        <li>
+          Responsible for preparing enlisted recruits for a transition to
+          military life.
+        </li>
+        <li>
+          Prepared travel arrangements for recruits from Houston to RTC, Great
+          Lakes, IL.
+        </li>
+        <li>
+          Ensured accuracy of enlisted recruit packages and service records.
+        </li>
+      </ul>
+      <h3>U.S. Navy — USS Rushmore (LSD-47)</h3>
+      <p>AUG 1998 - JUN 2000</p>
+      <ul>
+        <li>
+          Performed clerical and administrative duties involved in maintaining
+          personnel records, preparing reports, and accomplishing accounting
+          procedures.
+        </li>
+        <li>
+          Utilized and maintained publications and directives to personnel
+          administration and operated associated ADP equipment.
+        </li>
+      </ul>
+
       <h2>Education</h2>
       <h3>Ivy Tech Community College — A.A.S. - Visual Communications</h3>
       <p>JAN 2010 - DEC 2012</p>

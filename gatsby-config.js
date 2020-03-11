@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `RCAbney.dev`,
-    description: `RCAbney's blog site for the #100daysofgatsby challenge!`,
+    title: `RCAbney | Ryan C. Abney - Front-End Developer and Designer`,
+    description: `Ryan Abney's personal site yo`,
     author: `@RCAbney`,
   },
   plugins: [
