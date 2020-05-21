@@ -2,7 +2,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
       blogposts: allMdx(
-        filter: { fileAbsolutePath: { glob: "**/src/posts/*.mdx" } }
+        filter: { fileAbsolutePath: { glob: "**/src/posts/*" } }
       ) {
         nodes {
           frontmatter {

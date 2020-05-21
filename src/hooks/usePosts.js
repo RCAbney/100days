@@ -4,7 +4,7 @@ const usePosts = () => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
-        filter: { fileAbsolutePath: { glob: "**/src/posts/*.mdx" } }
+        filter: { fileAbsolutePath: { glob: "**/src/posts/*" } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         nodes {
